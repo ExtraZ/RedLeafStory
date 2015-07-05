@@ -1,11 +1,12 @@
 #include "RenderObject.h"
 
 
-RenderObject::RenderObject()
+void RenderObject::Initialize()
 {
+
 }
 
-
-RenderObject::~RenderObject()
+void RenderObject::Render()
 {
+
 }

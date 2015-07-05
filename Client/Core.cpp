@@ -3,7 +3,24 @@
 
 int main(int argc, char *argv[])
 {
-	MapleEquip* equip = reinterpret_cast<MapleEquip*>(new MapleItem(1, "SomeItem", MapleItemClass::EQUIPMENT));
-	getchar();
-	return 1;
+	//Initialize window object
+	sf::RenderWindow window(sf::VideoMode(800, 600), "RedLeafStory");
+
+	//Main loop
+	while (window.isOpen())
+	{
+		//Event polling and handling
+		sf::Event event;
+		while (window.pollEvent(event))
+		{
+			if (event.type == sf::Event::Closed)
+				window.close();
+		}
+
+		window.clear();
+		// Rendering goes here
+
+		window.display();
+	}
+	return 0;
 }
